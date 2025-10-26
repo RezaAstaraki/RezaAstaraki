@@ -1,0 +1,238 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+% \usepackage{fontawesome5} % Not available, using text symbols instead
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{tabularx}
+
+% Page setup
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
+\pagestyle{empty}
+
+% Colors
+\definecolor{primarycolor}{RGB}{0, 102, 153}
+\definecolor{accentcolor}{RGB}{204, 220, 57}
+\definecolor{textcolor}{RGB}{60, 60, 60}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    urlcolor=primarycolor,
+    urlbordercolor=primarycolor
+}
+
+% Section formatting
+\titleformat{\section}
+  {\Large\bfseries\color{primarycolor}}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{primarycolor}}
+  {}
+  {0em}
+  {}
+
+% Skill level visualization using filled/empty circles
+\newcommand{\skilllevel}[1]{%
+  \foreach \n in {1,...,5}{%
+    \ifnum\n>#1
+      \textcolor{gray!30}{$\circ$}%
+    \else
+      \textcolor{accentcolor}{$\bullet$}%
+    \fi
+  }%
+}
+
+% Custom commands
+\newcommand{\cvitem}[2]{%
+  \noindent\textbf{#1:} #2\par\vspace{2pt}
+}
+
+\newcommand{\cvskill}[2]{%
+  \noindent\makebox[6cm][l]{#1}\skilllevel{#2}\par\vspace{3pt}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge\bfseries\color{primarycolor} REZA ASTARAKI}
+  
+  \vspace{8pt}
+  {\Large\color{accentcolor} Web Developer}
+  
+  \vspace{12pt}
+  \begin{tabular}{c c c c}
+    \textbf{Email:} \href{mailto:reza.astaraki.work@gmail.com}{reza.astaraki.work@gmail.com} & 
+    \textbf{Phone:} (+98)9102300625 & 
+    \textbf{Web:} \href{https://rezaastaraki.info/}{rezaastaraki.info} & 
+    \textbf{Location:} Tehran, Iran
+  \end{tabular}
+  
+  \vspace{5pt}
+  \begin{tabular}{c c}
+    DoB: 1988-08-21 & Marital Status: Married
+  \end{tabular}
+\end{center}
+
+\vspace{10pt}
+
+% About Me
+\section*{About Me}
+\color{textcolor}
+I'm a highly motivated self-taught learner, deeply passionate about web development with Next.js, Django, and Redux Toolkit. I am dedicated to continuously improving my skills in these areas through dedicated learning and practice. Collaboration with teams is something I value, as it allows me to contribute effectively to projects. Moreover, I'm excited about delving into machine learning and data science to expand my skill set and take on fresh challenges.
+
+\vspace{10pt}
+
+% Education
+\section*{Education}
+
+\subsection*{Bachelor of Engineering \hfill \normalsize\color{textcolor} 2009 - 2011}
+\cvitem{Institute/University}{Qazvin Kar University}
+\cvitem{Location}{Qazvin, Iran}
+\cvitem{GPA}{15.75/20}
+
+\vspace{8pt}
+
+\subsection*{Associate in Manufacturing Engineering \hfill \normalsize\color{textcolor} 2006 - 2008}
+\cvitem{Branch}{Machine Tool}
+\cvitem{Institute/University}{Technical and Vocational University}
+\cvitem{Location}{Borujerd, Lorestan, Iran}
+\cvitem{GPA}{15.72/20}
+
+\vspace{10pt}
+
+% Skills
+\section*{Skills}
+
+\begin{multicols}{2}
+\cvskill{ReactJS}{4}
+\cvskill{NextJs}{4}
+\cvskill{Django}{3}
+\cvskill{Python}{4}
+\cvskill{User Interface Design}{3}
+\cvskill{SQL}{4}
+
+\columnbreak
+
+\cvskill{Supervised Machine Learning}{3}
+\cvskill{TypeScript}{4}
+\cvskill{Git \& GitHub}{4}
+\cvskill{HTML CSS JavaScript}{4}
+\cvskill{Data Visualization}{4}
+\cvskill{VBA Programming}{4}
+\end{multicols}
+
+\vspace{10pt}
+
+% Languages
+\section*{Languages}
+
+\subsection*{English}
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item Reading: Upper Intermediate
+  \item Speaking: Pre Intermediate
+  \item Writing: Intermediate
+  \item Listening: Upper Intermediate
+\end{itemize}
+
+\subsection*{Persian}
+Proficient (Native)
+
+\vspace{10pt}
+
+% Certificates
+\section*{Certificates}
+
+\begin{itemize}[leftmargin=*, itemsep=5pt]
+  \item \textbf{Applied Data Science with Python} - University of Michigan (Aug 2023)\\
+  \small\href{https://coursera.org/share/4a0b0b3c4e3d0b1e7d7d327915aaa16e}{View Certificate}
+  
+  \item \textbf{Web Application Technologies and Django} - University of Michigan (Apr 2024)\\
+  \small\href{https://www.coursera.org/share/5ff8314779b840b495e3ee5fc726cfde}{View Certificate}
+  
+  \item \textbf{Responsive Web Design} - University of London (Sep 2023)\\
+  \small\href{https://coursera.org/share/1bbdb06bcd04bc35434188707bb4de88}{View Certificate}
+  
+  \item \textbf{Developing Front-End Apps with React} - IBM (Jan 2024)\\
+  \small\href{https://coursera.org/share/6dd8299a96f660ba21dea8f9f792b104}{View Certificate}
+  
+  \item \textbf{Introduction to Cloud Computing} - IBM (Jan 2024)\\
+  \small\href{https://coursera.org/share/fc61595f8b14ca5c3aef8aaf8d180980}{View Certificate}
+  
+  \item \textbf{Data Visualization with Python} - IBM (Nov 2023)\\
+  \small\href{https://coursera.org/share/d3b74757aaf297e046e4ee55fd60f45f}{View Certificate}
+  
+  \item \textbf{Getting Started with Git and GitHub} - IBM (Oct 2023)\\
+  \small\href{https://coursera.org/share/9aba263325489f6cfac2634302877c48}{View Certificate}
+  
+  \item \textbf{Introduction to Web Development with HTML, CSS, JavaScript} - IBM (Oct 2023)\\
+  \small\href{https://coursera.org/share/a1d2470d859117b111c8bbce8f4cee64}{View Certificate}
+  
+  \item \textbf{Responsive Website Basics: Code with HTML, CSS, and JavaScript} (Aug 2023)\\
+  \small\href{https://coursera.org/share/936169505da3536b75b8bb343405d96e}{View Certificate}
+\end{itemize}
+
+\vspace{10pt}
+
+% Projects
+\section*{Projects}
+
+\subsection*{Air BnB Clone using Django-NextJS-Tailwind CSS-TypeScript \hfill \normalsize June 2024}
+A web app similar to Airbnb using Next.js and Django.
+
+\textbf{Key Features:}
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item Authentication with JWT and Google OAuth2 and Secure cookies sent by the Next.js server
+  \item Tailwind CSS for styling
+  \item TypeScript for type safety
+  \item Server components for data fetching as best practices
+  \item Django Rest Framework and Djoser for API handling like search filters in RestFramework standard
+\end{itemize}
+
+\textbf{Link:} \href{https://github.com/RezaAstaraki/air-bnb-clone}{GitHub Repository}
+
+\vspace{8pt}
+
+\subsection*{AI CV Builder}
+A web app for building CVs. The code is available on my GitHub account.
+
+\textbf{Key Features:}
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+  \item Next.js for the front end and ShadCN and Tailwind CSS for UI material styling
+  \item Clerk for user authentication
+  \item TypeScript for type safety
+  \item Redux Toolkit with combined slices for state management
+  \item Strapi as a headless CMS to handle data and APIs
+  \item PDF renderer for generating CVs
+  \item Gemini as an AI assistant to add descriptions
+\end{itemize}
+
+\textbf{Link:} \href{https://ai-cv-builder-five.vercel.app/}{Live Demo}
+
+\vspace{10pt}
+
+% Social Networks
+\section*{Connect With Me}
+
+\begin{center}
+\begin{tabular}{c c c}
+  \textbf{Website:} \href{https://rezaastaraki.info/}{rezaastaraki.info} & 
+  \textbf{LinkedIn:} \href{https://www.linkedin.com/in/reza-astaraky-792b3a26b}{reza-astaraky-792b3a26b} & 
+  \textbf{GitHub:} \href{https://github.com/RezaAstaraki}{RezaAstaraki}
+\end{tabular}
+\end{center}
+
+\end{document}
